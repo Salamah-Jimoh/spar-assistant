@@ -11,7 +11,7 @@ Spar Assistant randomly assign partners to speakers, allocate roles and complete
 ### Links
 
 
-- Live Site URL: [https://salamah.netlify.com]
+- Live Site URL: [https://spar-assistant.netlify.app/]
 ### Built with
 
 - Javascript
