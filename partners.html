@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spar Assistant | Partners</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="logo">
+        <p class="spar"><span>Spar</span>Assistant</p></div>
+    <div class="partner">
+        <div class="first-element">
+        <div class="form-field">
+            <label for="Name">Enter Teams Name</label>
+            <p class="instructions">(Use this field when all teams are complete)</p>
+            <input type="text" id="inputFour" class="input" placeholder="e.g team one, team two, team three">
+        </div>  
+           <button id="generateFour" class="btn">Ballot</button>
+           <div class="form-field">
+            <label for="Name">Enter Speakers Name</label>
+            <p class="instructions">(Use this field when 2 teams or 2 iron man are present and there are four speakers with no partners.Write teams or iron men first!)</p>
+            <input type="text" id="inputTwo" class="input" placeholder=" e.g team one, team two, speaker1,speaker2 ">
+        </div>
+           <button id="generateTwo" class="btn">Ballot</button>
+       <div class="form-field">
+        <label for="Name">Enter Speakers Name</label>
+        <p class="instructions">(Use this field when  1 team or iron man is present and there are six speakers with no partners. Write teams or iron man first!)</p>
+        <input type="text" id="input" class="input" placeholder="e.g team one, speaker1, speaker2">
+       </div> 
+       <button id="generate" class="btn">Ballot</button>
+    </div>
+       <div class="result">
+        <div class="ogov">
+    <h3>Opening Goverment</h3>
+    <ul id="og"></ul>
+        </div>
+      <div class="cgov">
+            <h3>Closing Goverment</h3>
+            <ul id="cg"></ul>
+                </div>
+                <div class="oop">
+                    <h3>Opening Opposition</h3>
+                    <ul id="oo"></ul>
+                        </div>
+                        <div class="oop">
+                            <h3>Closing Opposition</h3>
+                            <ul id="co"></ul>
+                                </div>
+       </div>
+    </div>
+    <div class="link">
+        <a class="text" href="index.html" target="_blank">No teams ? go here to assign partners and roles</a>
+       </div>
+       <p class="hello">Developed with <i class="fa-solid fa-heart"></i> & <i class ="fa fa-coffee"></i> by <a href="https://salamah.netlify.app">Salamah</a> for 
+        <a href="https://twitter.com/uIldc_">Unilorin Debate Club</a> </p>
+    <script src="partners.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+
+body{
+    background-color:black;
+    color:white; 
+}
+span{
+font-size: 28px;
+color:#ffb81c;
+}
+.logo{
+margin-bottom: 20px;
+font-size:20px;
+font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+ display:flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+.form-field{
+    margin:20px; 
+}
+label{
+    font-size: 17px;
+}
+.input{
+   margin-top:10px;
+   font-size:25px;
+    width:26rem;
+    border:3px solid #ffb81c;
+}
+
+.btn{
+    border-radius:.4rem;
+  outline:none;
+  border:none;
+  background-color:#ffb81c;
+  color:rgb(41, 40, 40);
+  padding:15px 20px;
+  font-size: 18px;
+}
+.btn:hover{
+    color:#ffb81c;
+    background-color:rgb(41, 40, 40);
+}
+.results{
+    display: flex;
+    margin:30px;
+}
+.og, .cg, .oo, .co{
+    border:1px solid #ffb81c;
+    margin:10px;
+    padding:20px;
+    transition: 1s;
+}
+.text{
+    color:white;
+}
+/*Partners*/
+.partner{
+    display:flex;
+}
+.first-element{
+    flex:1;
+}
+.input-container{
+    flex:1; 
+}
+.result{
+    display:block;
+    margin-right:100px ;
+}
+.ogov, .cgov, .oop, .cop{
+    border:1px solid #ffb81c;
+    margin:10px;
+    padding:20px;
+}
+.instructions{
+    width:300px;
+    font-size:14px;
+    color:grey;
+}
+.hello{
+    margin-top:150px;
+    font-size:14px;
+    color:grey;
+}
+.hello a{
+    color:grey;  
+}
+.link{
+    margin-top:70px;
+}
+@media(max-width:768px){
+    .results{
+        display: block;
+    }
+  .form-field{
+    margin:auto;
+  }
+  .btn{
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .input{
+    font-size:18px;
+    width:300px;
+  }
+  /**/
+  .partner{
+    display:block;
+  }
+  .ogov, .cgov, .oop, .cop{
+    padding:10px;
+}
+}
