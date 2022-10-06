@@ -11,11 +11,16 @@
 <body>
     <main>
     <div class="logo">
-<p class="spar"><span>Spar</span>Assistant</p></div>
+<p class="spar"><span>Spar</span>Assistant</p>
+<i class="fa-solid fa-sun light" id="light" ></i>
+<i class="fa-solid fa-moon dark"  id="dark" style="display:none"></i>
+
+</div>
 <div class="container">
    <div class="form-field">
     <label for="Name">Enter Speakers Name</label><br>
-    <input type="text" id="input" class="input" placeholder="e.g speaker1, speaker2, speaker3">
+    <div class="error"></div>
+    <input type="text" id="input" class="input" placeholder="e.g Harry, Hermione, Ron, Luna, ">
    </div> 
    <button id="generate" class="btn">Ballot</button>
    <div class="results">

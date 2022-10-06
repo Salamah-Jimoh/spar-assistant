@@ -10,25 +10,30 @@
 </head>
 <body>
     <div class="logo">
-        <p class="spar"><span>Spar</span>Assistant</p></div>
+        <p class="spar"><span>Spar</span>Assistant</p>
+        <i class="fa-solid fa-sun light" id="light" ></i>
+        <i class="fa-solid fa-moon dark"  id="dark" style="display:none"></i></div>
     <div class="partner">
         <div class="first-element">
         <div class="form-field">
             <label for="Name">Enter Teams Name</label>
+            <div class="error"></div>
             <p class="instructions">(Use this field when all teams are complete)</p>
-            <input type="text" id="inputFour" class="input" placeholder="e.g team one, team two, team three">
+            <input type="text" id="inputFour" class="input" placeholder="e.g Ravenclaw, Gryffindor, Slytherin,">
         </div>  
            <button id="generateFour" class="btn">Ballot</button>
            <div class="form-field">
             <label for="Name">Enter Speakers Name</label>
+            <div class="error-two"></div>
             <p class="instructions">(Use this field when 2 teams or 2 iron man are present and there are four speakers with no partners.Write teams or iron men first!)</p>
-            <input type="text" id="inputTwo" class="input" placeholder=" e.g team one, team two, speaker1,speaker2 ">
+            <input type="text" id="inputTwo" class="input" placeholder=" e.g Ravenclaw, Gryffindor, Harry,Ron ">
         </div>
            <button id="generateTwo" class="btn">Ballot</button>
        <div class="form-field">
         <label for="Name">Enter Speakers Name</label>
+        <div class="error-three"></div>
         <p class="instructions">(Use this field when  1 team or iron man is present and there are six speakers with no partners. Write teams or iron man first!)</p>
-        <input type="text" id="input" class="input" placeholder="e.g team one, speaker1, speaker2">
+        <input type="text" id="input" class="input" placeholder="e.g Ravenclaw, Harry, Ron,">
        </div> 
        <button id="generate" class="btn">Ballot</button>
     </div>

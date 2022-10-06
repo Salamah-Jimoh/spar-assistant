@@ -1,17 +1,50 @@
 
 body{
-    background-color:black;
+    background-color:#000a1a;
     color:white; 
+    transition: 2s;
 }
 span{
 font-size: 28px;
 color:#ffb81c;
 }
+
 .logo{
 margin-bottom: 20px;
 font-size:20px;
 font-family: Arial, Helvetica, sans-serif;
+display:flex;
 }
+.logo p{
+flex:5;
+}
+/*Toggle*/
+
+.dark{
+border:1px solid red;
+cursor:pointer;
+width:60px;
+height:30px;
+color:white;
+background-color: rgb(70, 69, 69);
+border:3px solid grey;
+margin: auto;
+padding:2px;
+border-radius: 50%;
+}
+.light{
+    border:1px solid red;
+    cursor:pointer;
+    width:60px;
+    height:30px;
+    color:yellow;
+    background-color: white;
+    border:3px solid grey;
+    margin: auto;
+    padding:2px;
+    border-radius: 50%;
+    display:none;
+    }
 .container{
  display:flex;
  flex-direction: column;
@@ -20,6 +53,12 @@ font-family: Arial, Helvetica, sans-serif;
 }
 .form-field{
     margin:20px; 
+}
+.error, .error-two, .error-three{
+    width:50%;
+    background-color: red;
+    color:white;
+    text-align:center;
 }
 label{
     font-size: 17px;
@@ -39,6 +78,8 @@ label{
   color:rgb(41, 40, 40);
   padding:15px 20px;
   font-size: 18px;
+  transition: .6s;
+  cursor: pointer;
 }
 .btn:hover{
     color:#ffb81c;
@@ -55,7 +96,8 @@ label{
     transition: 1s;
 }
 .text{
-    color:white;
+    color:grey;
+    cursor:pointer;
 }
 /*Partners*/
 .partner{
@@ -91,6 +133,7 @@ label{
 }
 .link{
     margin-top:70px;
+    cursor: pointer;
 }
 @media(max-width:768px){
     .results{

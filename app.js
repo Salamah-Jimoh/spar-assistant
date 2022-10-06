@@ -1,8 +1,42 @@
+// Toggle dark mode
+let darkBtn = document.getElementById('dark')
+let lightBtn = document.getElementById('light')
+darkBtn.addEventListener('click', ()=>{
+    document.querySelector('body').style.backgroundColor='#000a1a';
+    document.querySelector('body').style.color='white';
+    darkBtn.style.display='none';
+    lightBtn.style.display='block'
+})
+// Toggle light mode
+lightBtn.addEventListener('click', ()=>{
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+   lightBtn.style.display='none';
+   darkBtn.style.display='block'
+})
 // for no partnerships
 document.getElementById('generate').addEventListener('click', (e)=>{
     e.preventDefault();
+    let nameInput = document.getElementById('input');
     let nameValue=document.getElementById('input').value;
-    let nameSplit=nameValue.split(',');
+    // Check Empty input
+    if(nameValue===''){
+        nameInput.style.border='3px solid red';
+        var errorDiv =document.querySelector('.error')
+        errorDiv.innerHTML='<h4>Pls enter Speakers name</h4>'
+return
+    }
+
+ let nameSplit=nameValue.split(','); // split name values
+ // Check if there are eight speakers
+ if(nameSplit.length !==8 ){
+    nameInput.style.border='3px solid red';
+    var errorDiv =document.querySelector('.error')
+    errorDiv.innerHTML='<h4>There must be eight speakers</h4>'
+return
+}
+document.querySelector('.error').remove()// remove error message
+nameInput.style.border='3px solid #ffb81c';
    // var LastTeam= nameSplit.shift();// cut of paired teams
     var names={
         "Speaker one":nameSplit[0],
@@ -36,8 +70,8 @@ document.getElementById('generate').addEventListener('click', (e)=>{
            var secondTeam = getThirdName +' and ' +getFourthName;
            var thirdTeam = getFifthName +' and ' +getSixthName;
            var fourthTeam = getSeventhName +' and ' +getEightName;*/
-           // clear input field
-          document.getElementById('input').value='';
+          
+          document.getElementById('input').value='';  // clear input field
          //append to ul
          //OG
          let openingGoverment= document.getElementById('og');

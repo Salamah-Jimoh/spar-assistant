@@ -1,3 +1,19 @@
+// Toggle dark mode
+let darkBtn = document.getElementById('dark')
+let lightBtn = document.getElementById('light')
+darkBtn.addEventListener('click', ()=>{
+    document.querySelector('body').style.backgroundColor='#000a1a';
+    document.querySelector('body').style.color='white';
+    darkBtn.style.display='none';
+    lightBtn.style.display='block'
+})
+// Toggle light mode
+lightBtn.addEventListener('click', ()=>{
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+   lightBtn.style.display='none';
+   darkBtn.style.display='block'
+})
 let openingGoverment= document.getElementById('og');
 let closingGoverment= document.getElementById('cg');
 let openingOpposition= document.getElementById('oo');
@@ -6,8 +22,25 @@ let closingOpposition= document.getElementById('co');
 document.getElementById('generateFour').addEventListener('click', generateFour)
 function generateFour(e){
     e.preventDefault();
+    let nameInput = document.getElementById('input');
     let nameValue=document.getElementById('inputFour').value;
+    // Check empty
+    if(nameValue===''){
+        nameInput.style.border='3px solid red';
+        var errorDiv =document.querySelector('.error')
+        errorDiv.innerHTML='<h4>Pls enter Teams name</h4>'
+return
+    }
     let nameSplit=nameValue.split(',');
+    // Check if there are four teams
+ if(nameSplit.length !==4 ){
+    nameInput.style.border='3px solid red';
+    var errorDiv =document.querySelector('.error')
+    errorDiv.innerHTML='<h4>There must be four teams</h4>'
+return
+}
+document.querySelector('.error').remove()// remove error message
+nameInput.style.border='3px solid #ffb81c';
     let names={
         "Team one":nameSplit[0],
         "Team Two":nameSplit[1],
@@ -38,7 +71,17 @@ function generateFour(e){
 document.getElementById('generateTwo').addEventListener('click', generateTwo);
 function generateTwo(e){
     e.preventDefault();
+    let nameInput = document.getElementById('input');
     let nameValue=document.getElementById('inputTwo').value;
+     // Check empty
+     if(nameValue===''){
+        nameInput.style.border='3px solid red';
+        var errorDiv =document.querySelector('.error-two')
+        errorDiv.innerHTML='<h4>Pls enter Teams and speakers name</h4>'
+return
+    }
+    document.querySelector('.error-two').remove()// remove error message
+nameInput.style.border='3px solid #ffb81c';
     let nameSplit=nameValue.split(',');
     let lastTeams= nameSplit.splice(0,2);// cut of paired teams
     let TeamOne= lastTeams[0];
@@ -91,7 +134,17 @@ function generateTwo(e){
 document.getElementById('generate').addEventListener('click', generateOne)
 function generateOne(e){
     e.preventDefault();
+    let nameInput = document.getElementById('input');
     let nameValue=document.getElementById('input').value;
+      // Check empty
+      if(nameValue===''){
+        nameInput.style.border='3px solid red';
+        var errorDiv =document.querySelector('.error-three')
+        errorDiv.innerHTML='<h4>Pls enter Teams and speakers name</h4>'
+return
+    }
+    document.querySelector('.error-three').remove()// remove error message
+nameInput.style.border='3px solid #ffb81c';
     let nameSplit=nameValue.split(',');
     let LastTeam= nameSplit.shift();// cut of paired teams
     let names={
