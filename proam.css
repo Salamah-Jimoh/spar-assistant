@@ -1,3 +1,7 @@
+*{
+    margin:0;
+    padding: 0;
+}
 
 body{
     background-color:#000a1a;
@@ -8,8 +12,8 @@ span{
 font-size: 28px;
 color:#ffb81c;
 }
-
 .logo{
+margin-top:2rem;
 margin-bottom: 20px;
 font-size:20px;
 font-family: Arial, Helvetica, sans-serif;
@@ -79,6 +83,9 @@ border-radius: 50%;
 .form-field{
     margin:20px; 
 }
+#form-2{
+    display:none;
+}
 .error, .error-two, .error-three{
     width:50%;
     background-color: red;
@@ -94,9 +101,8 @@ label{
     width:26rem;
     border:3px solid #ffb81c;
 }
-
 .btn{
-    border-radius:.4rem;
+  border-radius:.4rem;
   outline:none;
   border:none;
   background-color:#ffb81c;
@@ -110,15 +116,14 @@ label{
     color:#ffb81c;
     background-color:rgb(41, 40, 40);
 }
-.results{
-    display: flex;
+
+.result{
     margin:30px;
+    display:none;
 }
-.og, .cg, .oo, .co{
-    border:1px solid #ffb81c;
-    margin:10px;
-    padding:20px;
-    transition: 1s;
+.result li{
+    margin-top:1rem;
+    font-size:25px;
 }
 .text{
     color:grey;
@@ -133,10 +138,6 @@ label{
 }
 .input-container{
     flex:1; 
-}
-.result{
-    display:block;
-    margin-right:100px ;
 }
 .ogov, .cgov, .oop, .cop{
     border:1px solid #ffb81c;
@@ -164,9 +165,6 @@ label{
     cursor: pointer;
 }
 @media(max-width:768px){
-    .results{
-        display: block;
-    }
   .form-field{
     margin:auto;
   }
@@ -242,3 +240,4 @@ label{
     transition: 0.5s;  
 }
 }
+

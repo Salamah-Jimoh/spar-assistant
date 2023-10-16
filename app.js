@@ -1,19 +1,19 @@
-// Toggle dark mode
-let darkBtn = document.getElementById('dark')
-let lightBtn = document.getElementById('light')
-darkBtn.addEventListener('click', ()=>{
-    document.querySelector('body').style.backgroundColor='#000a1a';
-    document.querySelector('body').style.color='white';
-    darkBtn.style.display='none';
-    lightBtn.style.display='block'
-})
-// Toggle light mode
-lightBtn.addEventListener('click', ()=>{
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-   lightBtn.style.display='none';
-   darkBtn.style.display='block'
-})
+// // Toggle dark mode
+// let darkBtn = document.getElementById('dark')
+// let lightBtn = document.getElementById('light')
+// darkBtn.addEventListener('click', ()=>{
+//     document.querySelector('body').style.backgroundColor='#000a1a';
+//     document.querySelector('body').style.color='white';
+//     darkBtn.style.display='none';
+//     lightBtn.style.display='block'
+// })
+// // Toggle light mode
+// lightBtn.addEventListener('click', ()=>{
+//     document.querySelector('body').style.backgroundColor='white';
+//     document.querySelector('body').style.color='black';
+//    lightBtn.style.display='none';
+//    darkBtn.style.display='block'
+// })
 // for no partnerships
 document.getElementById('generate').addEventListener('click', (e)=>{
     e.preventDefault();
@@ -107,5 +107,27 @@ nameInput.style.border='3px solid #ffb81c';
          closingOpposition.appendChild(eightName);
          document.getElementById('generate').innerHTML='Ballot is ready'
         });
-        
+        // Menu
+// Open menu
+document.getElementById('menu-open').addEventListener('click', ()=>{
+    document.getElementById('menu-expand').style.display="block";
+    document.getElementById('menu-open').style.display ="none"
+    document.getElementById('main').style.marginLeft="200px";  
+})
+//close menu
+document.getElementById('menu-close').addEventListener('click', ()=>{
+    document.getElementById('menu-expand').style.display="none";
+    document.getElementById('menu-open').style.display ="block"
+   document.getElementById('main').style.marginLeft="";   
+})
+// Close Menu Onclick Menu Items
+let menuItems =document.getElementsByClassName('menu-item');
+for(var i=0; i<menuItems.length; i++){
+    let menu = menuItems[i];
+    menu.addEventListener('click', ()=>{
+        document.getElementById('menu-expand').style.display="none";
+    document.getElementById('menu-open').style.display ="block"
+   document.getElementById('main').style.marginLeft=""; 
+    })
+}
 

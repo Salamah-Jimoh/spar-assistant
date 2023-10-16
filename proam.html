@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spar Assistant|Pro-Am</title> 
+    <link rel="stylesheet" href="proam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+     <main>
+        <div class="logo">
+    <p class="spar"><span>Spar</span>Assistant</p>
+    <!-- <i class="fa-solid fa-sun light" id="light" ></i>
+    <i class="fa-solid fa-moon dark"  id="dark" style="display:none"></i> -->
+    <!--Desktop menu-->
+    <div class="menu">
+        <ul>
+           <li><a href="index.html">Home</a></li>
+           <li><a href="proam.html">Pro-Am</a></li>
+           <li><a href="openinghalf.html">Opening Half</a></li>
+           <li><a href="partners.html">Iron Man</a></li>
+       </ul>
+         </div><!--Desktop Menu ends-->
+                 <!--Mobile menu-->
+                
+             
+           <div class="mobile-menu" >
+               <i class="fa fa-bars" id="menu-open"></i>
+               <div class="menu-expand" id="menu-expand">
+               <a href="#"  id="menu-close"> &times; </a>
+           <ul>
+               <li class="menu-item"><a href="index.html">Home</a></li>
+               <li class="menu-item"><a href="proam.html">Pro-Am</a></li>
+               <li class="menu-item"><a href="openinghalf.html">Opening Half</a></li>
+               <li class="menu-item"><a href="partners.html">Iron Man</a></li>
+           </ul>
+       </div>
+           </div><!--Mobile Menu ends-->
+            </div>
+            <div class="container">
+    <div id="error"></div>
+    <div id="form-1">
+        <div class="form-field">
+         <label for="Name">Enter PRO Speakers Name</label><br>
+         <input type="text" id="input" class="input" placeholder="e.g Harry, Hermione, Ron, Luna, ">
+        </div> 
+        <button id="generate" class="btn">Enter</button>
+    </div><!--form1-->
+            <div id="form-2">
+                <div class="form-field">
+                    <label for="Name">Enter AM Speakers Name</label><br>
+                    <input type="text" id="input2" class="input" placeholder="e.g Harry, Hermione, Ron, Luna, ">
+                   </div> 
+                   <button id="generate2" class="btn">Pair</button>
+                </div>
+                   <div class="result" id="result">
+                    <ul id="list"></ul>
+            </div>
+            <div class="linkk">
+               <p class="hello">Developed with <i class="fa-solid fa-heart"></i> & <i class ="fa fa-coffee"></i> by <a href="https://salamah.netlify.app">Salamah</a> for 
+                <a href="https://twitter.com/uIldc_">Unilorin Debate Club</a> </p>
+            </div>
+<script src="proam.js"></script>
+</body>
+</html>
